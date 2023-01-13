@@ -1,0 +1,418 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+	int berapa;
+	
+	cout<<"\t\t == KONVERSI NILAI RATA RATA KELULUSAN MURID =="<<endl;
+	cout<<"\t *APABILA NILAI DIBAWAH 70 ATAU TERBACA 'B' MAKA SISWA TIDAK LULUS!!* "<<endl<<endl;
+	
+	cout<<"masukkan jumlah siswa = ";
+	cin>>berapa;
+	
+	string nama[berapa];
+	float ipa[berapa];
+	float ips[berapa];
+	float petruk[berapa];
+	float mtk[berapa];
+	string grade[berapa];
+	
+	for(int i=0;i<berapa;i++){
+		cout<<"NAMA SISWA KE "<<i+1<<" = ";
+		cin>>nama[i];
+
+		cout<<"MASUKKAN NILAI IPA : ";
+		cin>>ipa[i];
+		
+		cout<<"MASUKKAN NILAI IPS : ";
+		cin>>ips[i];
+		
+		cout<<"MASUKKAN NILAI PETRUK : ";
+		cin>>petruk[i];
+		
+		cout<<"MASUKKAN NILAI MTK : ";
+		cin>>mtk[i];
+		
+		cout<<"=================================="<<endl;
+}
+	system("cls");
+	
+	//deklarasi total2.
+	float total2[berapa];
+	for(int i=0;i<berapa;i++){
+		
+			cout<<endl<<endl;
+			cout<<"/t NILAI ( "<<nama[i]<<" ) SISWA KE "<<i+1<<endl;
+				
+	//ipa;		
+	cout<<"MAPEL IPA"<<endl;
+	cout<<"NILAI IPA = "<<ipa[i]<<endl;
+			//jika nilai total/rata" yang dimasukkan lebih dari 100 maka akan langsung keluar tampilan dalam else.
+		if(ipa[i]<=100){
+			//mengkonversi nilai menjadi huruf	
+				if (ipa[i]<=100 && ipa[i]>=91) {
+				//apabila rata-rata nilai lebih dari sama dengan 91 sampai kurang dari sama dengan 100.
+					grade[i]="terbaca huruf : A+";
+				}
+			
+				else if (ipa[i]<=90 && ipa[i]>=81) {
+				//apabila rata-rata nilai lebih dari sama dengan 81 sampai kurang dari sama dengan 90.
+					grade[i]="terbaca huruf : A";
+				}
+			
+				else if (ipa[i]<=80 && ipa[i]>=70){
+				//apabila rata-rata nilai lebih dari sama dengan 70 sampai kurang dari sama dengan 80.
+					grade[i]="terbaca huruf : B+";
+				}
+			
+				else if (ipa[i]<=69 && ipa[i]>=60){
+				//apabila rata-rata nilai lebih dari sama dengan 60 sampai kurang dari sama dengan 69.
+					grade[i]="terbaca huruf : B";	
+				}
+			
+				else if (ipa[i]<=59 && ipa[i]>=50){
+				//apabila rata-rata nilai lebih dari sama dengan 50 sampai kurang dari sama dengan 69.
+					grade[i]="terbaca huruf : C+";	
+				}
+			
+				else if (ipa[i]<=49 && ipa[i]>=40){
+				//apabila rata-rata nilai lebih dari sama dengan 40 sampai kurang dari sama dengan 49.
+					grade[i]="terbaca huruf : C";	
+				}
+			
+				else if (ipa[i]<=39 && ipa[i]>=30){
+				//apabila rata-rata nilai lebih dari sama dengan 30 sampai kurang dari sama dengan 39.
+					grade[i]="terbaca huruf : D+";	
+				}
+			
+				else if (ipa[i]<=29 && ipa[i]>=20){
+				//apabila rata-rata nilai lebih dari sama dengan 20 sampai kurang dari sama dengan 29.
+					grade[i]="terbaca huruf : D";	
+				}
+			
+				else if (ipa[i]<=19 && ipa[i]>=10){
+				//apabila rata-rata nilai lebih dari sama dengan 10 sampai kurang dari sama dengan 19.
+					grade[i]="terbaca huruf : E+";	
+				}
+			
+				else if (ipa[i]<=9 && ipa[i]>=0){
+				//apabila rata-rata nilai lebih dari sama dengan 0 sampai kurang dari sama dengan 9.
+					grade[i]="terbaca huruf : E";	
+				}
+			
+				//kondisi kelulusan mahasiswa
+				cout<<grade[i]<<endl;
+				if(ipa[i]>=70){
+					cout<<"SISWA/SISWI DINYATAKAN tidak mengulang"<<endl;
+				}
+				else{
+					cout<<"SISWA/SISWI DINYATAKAN mengulang"<<endl;
+				}
+				cout<<"=================================="<<endl;
+		}
+		else{
+			cout<<"NILAI MAHASISWA TIDAK TERDETEKSI"<<endl;
+			cout<<"masukkan nilai dengan benar,nilai rata-rata harus kurang dari sama dengan 100 agar dapat terbaca!!"<<endl;
+			cout<<"====================================="<<endl;
+		}
+	
+	//ips;
+	cout<<"MAPEL IPS"<<endl;
+	cout<<"NILAI IPS = "<<ips[i]<<endl;
+		//jika nilai total/rata" yang dimasukkan lebih dari 100 maka akan langsung keluar tampilan dalam else.
+		if(ips[i]<=100){
+			//mengkonversi nilai menjadi huruf	
+				if (ips[i]<=100 && ips[i]>=91) {
+				//apabila rata-rata nilai lebih dari sama dengan 91 sampai kurang dari sama dengan 100.
+					grade[i]="terbaca huruf : A+";
+				}
+			
+				else if (ips[i]<=90 && ips[i]>=81) {
+				//apabila rata-rata nilai lebih dari sama dengan 81 sampai kurang dari sama dengan 90.
+					grade[i]="terbaca huruf : A";
+				}
+			
+				else if (ips[i]<=80 && ips[i]>=70){
+				//apabila rata-rata nilai lebih dari sama dengan 70 sampai kurang dari sama dengan 80.
+					grade[i]="terbaca huruf : B+";
+				}
+			
+				else if (ips[i]<=69 && ips[i]>=60){
+				//apabila rata-rata nilai lebih dari sama dengan 60 sampai kurang dari sama dengan 69.
+					grade[i]="terbaca huruf : B";	
+				}
+			
+				else if (ips[i]<=59 && ips[i]>=50){
+				//apabila rata-rata nilai lebih dari sama dengan 50 sampai kurang dari sama dengan 69.
+					grade[i]="terbaca huruf : C+";	
+				}
+			
+				else if (ips[i]<=49 && ips[i]>=40){
+				//apabila rata-rata nilai lebih dari sama dengan 40 sampai kurang dari sama dengan 49.
+					grade[i]="terbaca huruf : C";	
+				}
+			
+				else if (ips[i]<=39 && ips[i]>=30){
+				//apabila rata-rata nilai lebih dari sama dengan 30 sampai kurang dari sama dengan 39.
+					grade[i]="terbaca huruf : D+";	
+				}
+			
+				else if (ips[i]<=29 && ips[i]>=20){
+				//apabila rata-rata nilai lebih dari sama dengan 20 sampai kurang dari sama dengan 29.
+					grade[i]="terbaca huruf : D";	
+				}
+			
+				else if (ips[i]<=19 && ips[i]>=10){
+				//apabila rata-rata nilai lebih dari sama dengan 10 sampai kurang dari sama dengan 19.
+					grade[i]="terbaca huruf : E+";	
+				}
+			
+				else if (ips[i]<=9 && ips[i]>=0){
+				//apabila rata-rata nilai lebih dari sama dengan 0 sampai kurang dari sama dengan 9.
+					grade[i]="terbaca huruf : E";	
+				}
+			
+				//kondisi kelulusan mahasiswa
+				cout<<grade[i]<<endl;
+				if(ips[i]>=70){
+					cout<<"SISWA/SISWI DINYATAKAN tidak mengulang"<<endl;
+				}
+				else{
+					cout<<"SISWA/SISWI DINYATAKAN mengulang"<<endl;
+				}
+				cout<<"=================================="<<endl;
+		}
+		else{
+			cout<<"NILAI MAHASISWA TIDAK TERDETEKSI"<<endl;
+			cout<<"masukkan nilai dengan benar,nilai rata-rata harus kurang dari sama dengan 100 agar dapat terbaca!!"<<endl;
+			cout<<"====================================="<<endl;
+		}
+	
+	//petruk;
+	cout<<"MAPEL PETRUK"<<endl;
+	cout<<"NILAI PETRUK = "<<petruk[i]<<endl;	
+		//jika nilai total/rata" yang dimasukkan lebih dari 100 maka akan langsung keluar tampilan dalam else.
+		if(petruk[i]<=100){
+			//mengkonversi nilai menjadi huruf	
+				if (petruk[i]<=100 && petruk[i]>=91) {
+				//apabila rata-rata nilai lebih dari sama dengan 91 sampai kurang dari sama dengan 100.
+					grade[i]="terbaca huruf : A+";
+				}
+			
+				else if (petruk[i]<=90 && petruk[i]>=81) {
+				//apabila rata-rata nilai lebih dari sama dengan 81 sampai kurang dari sama dengan 90.
+					grade[i]="terbaca huruf : A";
+				}
+			
+				else if (petruk[i]<=80 && petruk[i]>=70){
+				//apabila rata-rata nilai lebih dari sama dengan 70 sampai kurang dari sama dengan 80.
+					grade[i]="terbaca huruf : B+";
+				}
+			
+				else if (petruk[i]<=69 && petruk[i]>=60){
+				//apabila rata-rata nilai lebih dari sama dengan 60 sampai kurang dari sama dengan 69.
+					grade[i]="terbaca huruf : B";	
+				}
+			
+				else if (petruk[i]<=59 && petruk[i]>=50){
+				//apabila rata-rata nilai lebih dari sama dengan 50 sampai kurang dari sama dengan 69.
+					grade[i]="terbaca huruf : C+";	
+				}
+			
+				else if (petruk[i]<=49 && petruk[i]>=40){
+				//apabila rata-rata nilai lebih dari sama dengan 40 sampai kurang dari sama dengan 49.
+					grade[i]="terbaca huruf : C";	
+				}
+			
+				else if (petruk[i]<=39 && petruk[i]>=30){
+				//apabila rata-rata nilai lebih dari sama dengan 30 sampai kurang dari sama dengan 39.
+					grade[i]="terbaca huruf : D+";	
+				}
+			
+				else if (petruk[i]<=29 && petruk[i]>=20){
+				//apabila rata-rata nilai lebih dari sama dengan 20 sampai kurang dari sama dengan 29.
+					grade[i]="terbaca huruf : D";	
+				}
+			
+				else if (petruk[i]<=19 && petruk[i]>=10){
+				//apabila rata-rata nilai lebih dari sama dengan 10 sampai kurang dari sama dengan 19.
+					grade[i]="terbaca huruf : E+";	
+				}
+			
+				else if (petruk[i]<=9 && petruk[i]>=0){
+				//apabila rata-rata nilai lebih dari sama dengan 0 sampai kurang dari sama dengan 9.
+					grade[i]="terbaca huruf : E";	
+				}
+			
+				//kondisi kelulusan mahasiswa
+				cout<<grade[i]<<endl;
+				if(petruk[i]>=70){
+					cout<<"SISWA/SISWI DINYATAKAN tidak mengulang"<<endl;
+				}
+				else{
+					cout<<"SISWA/SISWI DINYATAKAN mengulang"<<endl;
+				}
+				cout<<"=================================="<<endl;
+		}
+		else{
+			cout<<"NILAI MAHASISWA TIDAK TERDETEKSI"<<endl;
+			cout<<"masukkan nilai dengan benar,nilai rata-rata harus kurang dari sama dengan 100 agar dapat terbaca!!"<<endl;
+			cout<<"====================================="<<endl;
+		}
+	
+	//mtk;
+		cout<<"MAPEL MATEMATIKA"<<endl;
+		cout<<"NILAI MATEMATIKA = "<<mtk[i]<<endl;
+			//jika nilai total/rata" yang dimasukkan lebih dari 100 maka akan langsung keluar tampilan dalam else.
+		if(mtk[i]<=100){
+			//mengkonversi nilai menjadi huruf	
+				if (mtk[i]<=100 && mtk[i]>=91) {
+				//apabila rata-rata nilai lebih dari sama dengan 91 sampai kurang dari sama dengan 100.
+					grade[i]="terbaca huruf : A+";
+				}
+			
+				else if (mtk[i]<=90 && mtk[i]>=81) {
+				//apabila rata-rata nilai lebih dari sama dengan 81 sampai kurang dari sama dengan 90.
+					grade[i]="terbaca huruf : A";
+				}
+			
+				else if (mtk[i]<=80 && mtk[i]>=70){
+				//apabila rata-rata nilai lebih dari sama dengan 70 sampai kurang dari sama dengan 80.
+					grade[i]="terbaca huruf : B+";
+				}
+			
+				else if (mtk[i]<=69 && mtk[i]>=60){
+				//apabila rata-rata nilai lebih dari sama dengan 60 sampai kurang dari sama dengan 69.
+					grade[i]="terbaca huruf : B";	
+				}
+			
+				else if (mtk[i]<=59 && mtk[i]>=50){
+				//apabila rata-rata nilai lebih dari sama dengan 50 sampai kurang dari sama dengan 69.
+					grade[i]="terbaca huruf : C+";	
+				}
+			
+				else if (mtk[i]<=49 && mtk[i]>=40){
+				//apabila rata-rata nilai lebih dari sama dengan 40 sampai kurang dari sama dengan 49.
+					grade[i]="terbaca huruf : C";	
+				}
+			
+				else if (mtk[i]<=39 && mtk[i]>=30){
+				//apabila rata-rata nilai lebih dari sama dengan 30 sampai kurang dari sama dengan 39.
+					grade[i]="terbaca huruf : D+";	
+				}
+			
+				else if (mtk[i]<=29 && mtk[i]>=20){
+				//apabila rata-rata nilai lebih dari sama dengan 20 sampai kurang dari sama dengan 29.
+					grade[i]="terbaca huruf : D";	
+				}
+			
+				else if (mtk[i]<=19 && mtk[i]>=10){
+				//apabila rata-rata nilai lebih dari sama dengan 10 sampai kurang dari sama dengan 19.
+					grade[i]="terbaca huruf : E+";	
+				}
+			
+				else if (mtk[i]<=9 && mtk[i]>=0){
+				//apabila rata-rata nilai lebih dari sama dengan 0 sampai kurang dari sama dengan 9.
+					grade[i]="terbaca huruf : E";	
+				}
+			
+				//kondisi kelulusan mahasiswa
+				cout<<grade[i]<<endl;
+				if(mtk[i]>=70){
+					cout<<"SISWA/SISWI DINYATAKAN tidak mengulang"<<endl;
+				}
+				else{
+					cout<<"SISWA/SISWI DINYATAKAN mengulang"<<endl;
+				}
+				cout<<"=================================="<<endl;
+		}
+		else{
+			cout<<"NILAI MAHASISWA TIDAK TERDETEKSI"<<endl;
+			cout<<"masukkan nilai dengan benar,nilai rata-rata harus kurang dari sama dengan 100 agar dapat terbaca!!"<<endl;
+			cout<<"====================================="<<endl;
+		}
+	}
+	//total
+	for(int i=0;i<berapa;i++){
+		//perhitungan rata"
+			total2[i] = (ipa[i]+ips[i]+petruk[i]+mtk[i]) / 4;
+		//tampilan output rata"
+		cout<<endl;
+		cout<<"/tRATA-RATA NILAI ( "<<nama[i]<<" ) SISWA KE "<<i+1<<" ADALAH = ";
+		printf(" %0.f \n",total2[i]);
+			
+			if(total2[i]<=100){
+				
+				//mengkonversi nilai menjadi huruf	
+				if (total2[i]<=100 && total2[i]>=91) {
+				//apabila rata-rata nilai lebih dari sama dengan 91 sampai kurang dari sama dengan 100.
+					grade[i]="terbaca huruf : A+";
+				}
+			
+				else if (total2[i]<=90 && total2[i]>=81) {
+				//apabila rata-rata nilai lebih dari sama dengan 81 sampai kurang dari sama dengan 90.
+					grade[i]="terbaca huruf : A";
+				}
+			
+				else if (total2[i]<=80 && total2[i]>=70){
+				//apabila rata-rata nilai lebih dari sama dengan 70 sampai kurang dari sama dengan 80.
+					grade[i]="terbaca huruf : B+";
+				}
+			
+				else if (total2[i]<=69 && total2[i]>=60){
+				//apabila rata-rata nilai lebih dari sama dengan 60 sampai kurang dari sama dengan 69.
+					grade[i]="terbaca huruf : B";	
+				}
+			
+				else if (total2[i]<=59 && total2[i]>=50){
+				//apabila rata-rata nilai lebih dari sama dengan 50 sampai kurang dari sama dengan 69.
+					grade[i]="terbaca huruf : C+";	
+				}
+			
+				else if (total2[i]<=49 && total2[i]>=40){
+				//apabila rata-rata nilai lebih dari sama dengan 40 sampai kurang dari sama dengan 49.
+					grade[i]="terbaca huruf : C";	
+				}
+			
+				else if (total2[i]<=39 && total2[i]>=30){
+				//apabila rata-rata nilai lebih dari sama dengan 30 sampai kurang dari sama dengan 39.
+					grade[i]="terbaca huruf : D+";	
+				}
+			
+				else if (total2[i]<=29 && total2[i]>=20){
+				//apabila rata-rata nilai lebih dari sama dengan 20 sampai kurang dari sama dengan 29.
+					grade[i]="terbaca huruf : D";	
+				}
+			
+				else if (total2[i]<=19 && total2[i]>=10){
+				//apabila rata-rata nilai lebih dari sama dengan 10 sampai kurang dari sama dengan 19.
+					grade[i]="terbaca huruf : E+";	
+				}
+			
+				else if (total2[i]<=9 && total2[i]>=0){
+				//apabila rata-rata nilai lebih dari sama dengan 0 sampai kurang dari sama dengan 9.
+					grade[i]="terbaca huruf : E";	
+				}
+				
+		//koversi nilai total;	
+		cout<<grade[i]<<endl;
+				
+				if(total2[i]>=70){
+					cout<<"SISWA/SISWI DINYATAKAN LULUS"<<endl;
+					cout<<"=================================="<<endl;
+				}
+				else if(total2[i]<=70){
+					cout<<"SISWA/SISWI DINYATAKAN TIDAK LULUS"<<endl;
+					cout<<"=================================="<<endl;
+				}
+			}
+			else{
+			cout<<"NILAI MAHASISWA TIDAK TERDETEKSI"<<endl;
+			cout<<"masukkan nilai dengan benar,nilai rata-rata harus kurang dari sama dengan 100 agar dapat terbaca!!"<<endl;
+			cout<<"=================================="<<endl;
+	
+			}
+		}
+				
+	}
+	
